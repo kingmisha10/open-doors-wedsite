@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oper Doors Assembly Wediste</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="home.css">
+
+
+</head>
+<body>
+  <header>
+    <section class="hero">
+      <div class="nav-bar">
+      <div class="logo"><img src="picture/Rccg_logo.png" alt="rccg">Open Doors Assembly</div>
+
+      <nav class="nav-link">
+        <ul>
+          <li class="link"><a style="text-decoration: underline; color: gold;" href="home.html">Home</a></li>
+          <li class="link"><a href="about.html" target="_blank">About</a></li>
+          <li class="link"><a href="ministries.html" target="_blank">Ministries</a></li>
+          <li class="link"><a href="sermons.html" target="_blank">Sermons</a></li>
+          <li class="link"><a href="event.html" target="_blank">Events</a></li>
+          <li class="link"><a href="prayer.html" target="_blank">Prayer Request</a></li>
+          <li class="link"><a href="contacts.html" target="_blank">Contacts</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+        <div class="hero-content">
+      
+        <div class="slide active" style="background-image:url('picture/WhatsApp\ Image\ 2025-12-29\ at\ 11.09.38\ AM.jpeg')">
+    <div class="content">
+        <h4>Welcome to</h4>
+        <h1>Open Doors Assembly LP51 Provincial HQ</h1>
+        <p>
+          At Open Doors Assembly, we believe in a God who opens doors that no man can close. 
+          Our mission is to bring people closer to Christ, transform lives through the Word, and create a community where faith, 
+          hope, and love thrive.
+        </p>
+        <div class="buttons">
+            <a href="about.html" class="btn-yellow">ABOUT US</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="slide" style="background-image:url(picture/WhatsApp\ Image\ 2025-12-29\ at\ 11.13.51\ AM.jpeg)">
+    <div class="content">
+        <h4>Discover Your</h4>
+        <h1>Place in God's Family</h1>
+        <p>
+            At Open Doors Assembly, everyone has a home in God’s family. No matter where you are in life, you are welcome here to grow in faith, find support, and experience God’s love.
+Join us as we worship, pray, and serve together, and discover your unique role in God’s purpose. Here, you’re not just a visitor — you belong.
+Step in and discover your place in God’s family today!
+        </p>
+        <div class="buttons">
+            <a href="event.html" class="btn-yellow">JOIN US</a>
+        </div>
+    </div>
+</div>
+
+<div class="slide" style="background-image:url(picture/WhatsApp\ Image\ 2025-12-29\ at\ 11.48.58\ AM.jpeg)">
+    <div class="content">
+        <h4>Join Us</h4>
+        <h1>In Praising Our God</h1>
+        <p>
+        At Open Doors Assembly, we lift our hearts in worship and celebrate the greatness of God every day. Come as you are and experience the joy, peace, and power of heartfelt praise.
+Together, we sing, pray, and encounter the presence of God — because when we praise Him, doors open, chains break, and miracles happen.
+Step in, lift your voice, and join us in praising our God!    
+        </p>
+    </div>
+</div>
+
+  <div class="slide" style="background-image:url(picture/WhatsApp\ Image\ 2025-12-29\ at\ 9.25.16\ AM.jpeg)">
+    <div class="content">
+        <h4>Remember</h4>
+        <h1>That the Bible say</h1>
+        <p>
+        In Hebrews 13:8 That "JESUS CHRIST IS THE SAME YESTERDAY, TODAY, AND FOREVER🙏🙏🙌."
+        </p>
+    </div>
+</div>
+
+  <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+<div class="arrow right" onclick="nextSlide()">&#10095;</div>
+</div>
+
+<script>
+    let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
+}
+
+function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+}
+
+function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+}
+  </script>
+    </section>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18">
+        <h3>OUR STORY</h3>
+        <p>
+          Our journey is rooted in the belief that GOD opens doors no one can close. Through worship, prayer, teaching, and fellowship, we strive to
+          <strong>equip people to walk in their God-given destiny.</strong>
+        </p>
+        <a href="about.html">READ MORE →</a>
+      </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65">
+        <h3>OUR MINISTRIES</h3>
+        <p>
+          At Open Doors Assembly, we believe in serving God by serving people. Our ministries are designed to help you grow spiritually, connect with others, and impact your community.
+        </p>
+        <a href="ministries.html">LEARN MORE →</a>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94">
+        <h3>OUTREACH MISSIONS</h3>
+        <p>
+          At Open Doors Assembly, we are committed to bringing hope, love, and the gospel to those in need.
+          Our outreach and mission programs aim to serve communities, uplift the vulnerable, and extend God's kingdom beyond our walls.
+        </p>
+        <a href="#">JOIN OUR OUTREACH →</a>
+    </div>
+
+
+
+    
+    <!-- SIDE ACTIONS -->
+    <div class="side-actions">
+        <div class="action give">
+            <h4>GIVE TO THE CHURCH</h4>
+            <p><a style="text-decoration: none;" href="offering.html">Offerings, Titles, Donate to help a cause</a></p>
+        </div>
+
+        <div class="action involved">
+            <h4>GET INVOLVED</h4>
+            <p><a style="text-decoration: none;" href="event.html">Be involved. Get involved</a></p>
+        </div>
+
+        <div class="action prayer">
+            <h4>PRAYER REQUEST</h4>
+            <p><a style="text-decoration: none;" href="prayer.html">Let's pray together</a></p>
+        </div>
+    </div>
+
+</div>
+
+<section class="fly">
+      <div class="flyer">
+
+    <!-- LEFT -->
+      <div class="left-section">
+      <img src="picture/WhatsApp Image 2025-12-29 at 1.30.03 PM.jpeg" alt="Church Logo" class="logo" />
+
+      <div class="church-name">OPEN DOORS ASSEMBLY</div>
+      <div class="province">Lagos Province 51 HQTRS</div>
+
+      <div class="headline">
+        <span>SEE YOU</span>
+        <span>IN CHURCH</span>
+        <span class="every">EVERY</span>
+      </div>
+
+      <div class="schedule">
+        <p ><strong>Sunday:</strong> Sunday Service <span class="time">(8:00am)</span></p>
+        <p ><strong>Tuesday:</strong> Word Encounter <span class="time">(6:30pm)</span></p>
+        <p ><strong>Thursday:</strong> Healing Streams <span class="time">(6:30pm)</span></p>
+        <p><strong>Last Day of the Month:</strong> Cross Over, Holy Communion & Anointing Service <span class="time">(6:00pm)</span></p>
+      </div>
+
+      <div class="address">
+        <strong>RCCG OPEN DOORS ASSEMBLY, LP51 HEADQUARTERS:</strong><br />
+        1, Shalom Estate, Arepo, Off Lagos-Ibadan Expressway, Ogun State
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-section">
+      <div class="collage">
+        <img class="fade-img" src="picture/WhatsApp Image 2025-12-29 at 1.30.020 PM.jpeg" alt="Church Members" />
+        <img class="fade-img" src="picture/WhatsApp Image 2025-12-29 at 1.30.04 PM.jpeg" alt="Family" />
+        <img  class="fade-img"src="picture/WhatsApp Image 2025-12-29 at 1.30.05 PM.jpeg" alt="Worship" />
+        <img class="fade-img" src="picture/WhatsApp Image 2025-12-29 at 1.30.09 PM.jpeg" alt="Choir" />
+      </div>
+
+<script>
+const fadeImages = document.querySelectorAll(".fade-img");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                // 🔥 remove when out of view so it can replay
+                entry.target.classList.remove("show");
+            }
+        });
+    },
+    {
+        threshold: 0.3
+    }
+);
+
+fadeImages.forEach(img => observer.observe(img));
+</script>
+
+      <div class="follow">
+        <strong>FOLLOW US ON</strong>
+        <div class="socials">
+          <img src="picture/WhatsApp Image 2025-12-29 at 1.30.03 PM.jpeg" alt="Instagram" />
+          <span><a href="https://www.instagram.com/rccglp51hq?igsh=MWdjcTlrdzNxNDlnZA==" target="_blank">@rccglp51hq</a></span>
+
+          <img src="picture/WhatsApp Image 2025-12-29 at 1.30.03 PM.jpeg" alt="YouTube" />
+          <span> <a href="https://youtube.com/@rccglp51hq?si=1I02gXvVb8tNiFE5" target="_blank">RCCG Lagos</a></span>
+        </div>
+      </div>
+      
+</section>
+
+
+
+  <section>
+    <div class="page-container">
+      <h3 style="font-size: 30px; display: flex; align-items: center; margin: 20px;">Our Sermons</h3>
+          <div class="image-container">
+
+  <div class="image-box active" onclick="makeBig(this)" style="background-image: url('picture/WhatsApp Image 2025-12-29 at 2.18.10 PM.jpeg');">
+    <div class="text">
+      <h2>Salvation is key to heaven</h2>
+      <p>Heaven is real. Hell is real. Eternity is real.
+          The greatest question every human being must answer is this: How do I get to heaven?</p>
+          <a style="text-decoration: none; color: aliceblue;" href="sermons.html">Read More</a>
+    </div>
+  </div>
+
+  <div class="image-box" onclick="makeBig(this)" style="background-image: url('picture/WhatsApp Image 2025-12-29 at 2.18.25 PM.jpeg');">
+    <div class="text">
+      <h2>Worship open doors</h2>
+      <p> Many people pray for open doors, but few understand that worship itself is a key.
+          When words fail, when strength is gone, when situations look locked — worship opens doors.
+      </p>
+      <a style="text-decoration: none; color: aliceblue;" href="sermons.html">Read More</a>
+    </div>
+  </div>
+
+  <div class="image-box" onclick="makeBig(this)" style="background-image: url('picture/WhatsApp Image 2025-12-29 at 2.18.09 PM.jpeg');">
+    <div class="text">
+      <h2>Prayer is the key</h2>
+      <p>Life often comes with doors that are closed, mountains that seem insurmountable, and battles that feel endless.
+The Bible tells us that prayer is the key to unlocking every closed door, every blocked path, and every delayed blessing.</p>
+        <a style="text-decoration: none; color: aliceblue;" href="sermons.html">Read More</a>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+
+<script>
+  function makeBig(selected) {
+  const boxes = document.querySelectorAll('.image-box');
+
+  boxes.forEach(box => {
+    box.classList.remove('active');
+  });
+
+  selected.classList.add('active');
+}
+
+// Existing function
+function makeBig(selected) {
+  const boxes = document.querySelectorAll('.image-box');
+  boxes.forEach(box => box.classList.remove('active'));
+  selected.classList.add('active');
+}
+
+</script>
+
+  </section>
+
+<section class="events-section">
+  <h1>Upcoming & Past Events</h1>
+
+  <div class="events-grid">
+
+    <div class="event-card">
+      <img src="eventpic/WhatsApp Image 2025-12-30 at 2.06.08 PM.jpeg" alt="">
+      <div class="event-content">
+        <h3>Turning Point</h3>
+        <p>December 29 - 31 2025 • 6:00 pm</p>
+        <button><a style="text-decoration: none; color: antiquewhite;" href="event.html">View Event</a></button>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="eventpic/gnwrgirnwaqnioau.jpeg" alt="">
+      <div class="event-content">
+        <h3>Priceless Gift</h3>
+        <p>December 22 - 24 2025 • Camp Out</p>
+        <button><a style="text-decoration: none; color: antiquewhite;" href="event.html">View Event</a></button>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="eventpic/WhatsApp Image 2025-12-30 at 2.07.19 PM.jpeg" alt="">
+      <div class="event-content">
+        <h3>Christmas Carols</h3>
+        <p>December 21, 2025 • 4:00 pm</p>
+        <button><a style="text-decoration: none; color: antiquewhite;" href="event.html">View Event</a></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-about">
+      <h3>Open Doors Assembly LP51 Provincial HQ</h3>
+      <p>
+        At Open Doors Assembly, we believe in a God who opens doors that no man can close. 
+          Our mission is to bring people closer to Christ, transform lives through the Word, and create a community where faith, 
+          hope, and love thrive.
+      </p>
+    </div>
+
+    <!-- Ministries -->
+    <div class="footer-links">
+      <h4>OUR MINISTRIES</h4>
+      <ul>
+        <li><a href="#">Kids Ministry</a></li>
+        <li><a href="event.html">Outreach Ministry</a></li>
+        <li><a href="prayer.html">Prayer Ministry</a></li>
+        <li><a href="#">Worship Ministry</a></li>
+      </ul>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-links">
+      <h4>USEFUL LINKS</h4>
+      <ul>
+        <li><a href="prayer.html">Prayer Request</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><a href="offering.html">Give</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>SOCIAL MEDIA</h4>
+      <div class="social-icons">
+        <a href="#"><i class='bxr  bx-home'></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Open Doors Assembly | Designed by MishaHub
+  </div>
+
+  </footer>
+
+</body>
+</html>

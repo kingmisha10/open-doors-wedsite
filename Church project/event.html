@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+  <link rel="stylesheet" href="event.css">
+</head>
+<body>
+  <header>
+    <section class="hero">
+      <div class="nav-bar">
+      <div class="logo"><img src="picture/Rccg_logo.png" alt="rccg">Open Doors Assembly</div>
+
+      <nav class="nav-link">
+        <ul>
+          <li class="link"><a href="home.html" target="_blank">Home</a></li>
+          <li class="link"><a href="about.html" target="_blank">About</a></li>
+          <li class="link"><a href="ministries.html" target="_blank">Ministries</a></li>
+          <li class="link"><a href="sermons.html" target="_blank">Sermons</a></li>
+          <li class="link"><a style="text-decoration: underline; color: gold;" href="event.html" target="_blank">Events</a></li>
+          <li class="link"><a href="prayer.html" target="_blank">Prayer Request</a></li>
+          <li class="link"><a href="contacts.html" target="_blank">Contacts</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      
+      <section class="fly">
+      <div class="flyer">
+
+    <!-- LEFT -->
+      <div class="left-section">
+      <img src="picture/WhatsApp Image 2025-12-29 at 1.30.03 PM.jpeg" alt="Church Logo" class="logo" />
+
+      <div class="church-name">OPEN DOORS ASSEMBLY</div>
+      <div class="province">Lagos Province 51 HQTRS</div>
+
+      <div class="headline">
+        <span>SEE YOU</span>
+        <span>IN CHURCH</span>
+        <span class="every">EVERY</span>
+      </div>
+
+      <div class="schedule">
+        <p><strong>Sunday:</strong> Sunday Service <span class="time">(8:00am)</span></p>
+        <p><strong>Tuesday:</strong> Word Encounter <span class="time">(6:30pm)</span></p>
+        <p><strong>Thursday:</strong> Healing Streams <span class="time">(6:30pm)</span></p>
+        <p><strong>Last Day of the Month:</strong> Cross Over, Holy Communion & Anointing Service <span class="time">(6:00pm)</span></p>
+      </div>
+
+      <div class="address">
+        <strong>RCCG OPEN DOORS ASSEMBLY, LP51 HEADQUARTERS:</strong><br />
+        1, Shalom Estate, Arepo, Off Lagos-Ibadan Expressway, Ogun State
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-section">
+      <div class="collage">
+        <img class="fade-img" src="picture/WhatsApp Image 2025-12-29 at 1.30.020 PM.jpeg" alt="Church Members" />
+        <img class="fade-img" src="picture/WhatsApp Image 2025-12-29 at 1.30.04 PM.jpeg" alt="Family" />
+        <img  class="fade-img"src="picture/WhatsApp Image 2025-12-29 at 1.30.05 PM.jpeg" alt="Worship" />
+        <img class="fade-img" src="picture/WhatsApp Image 2025-12-29 at 1.30.09 PM.jpeg" alt="Choir" />
+      </div>
+
+<script>
+const fadeImages = document.querySelectorAll(".fade-img");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                // 🔥 remove when out of view so it can replay
+                entry.target.classList.remove("show");
+            }
+        });
+    },
+    {
+        threshold: 0.3
+    }
+);
+
+fadeImages.forEach(img => observer.observe(img));
+</script>
+
+      <div class="follow">
+        <strong>FOLLOW US ON</strong>
+        <div class="socials">
+          <img src="picture/WhatsApp Image 2025-12-29 at 1.30.03 PM.jpeg" alt="Instagram" />
+          <span><a href="https://www.instagram.com/rccglp51hq?igsh=MWdjcTlrdzNxNDlnZA==" target="_blank">@rccglp51hq</a></span>
+
+          <img src="picture/WhatsApp Image 2025-12-29 at 1.30.03 PM.jpeg" alt="YouTube" />
+          <span> <a href="https://youtube.com/@rccglp51hq?si=1I02gXvVb8tNiFE5" target="_blank">RCCG Lagos</a></span>
+        </div>
+      </div>
+      
+</section>
+
+
+
+<section class="events-section">
+  <h1 style="color: black;">Upcoming & Past Events</h1>
+
+  <div class="events-grid">
+
+    <div class="event-card">
+      <img src="eventpic/WhatsApp Image 2025-12-30 at 2.06.08 PM.jpeg" alt="">
+      <div class="event-content">
+        <h3>Turning Point</h3>
+        <p>December 29 - 31 2025 • 6:00 pm</p>
+        <button><a style="text-decoration: none; color: antiquewhite;" href="https://www.instagram.com/rccglp51hq?igsh=MWdjcTlrdzNxNDlnZA==">View Event</a></button>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="eventpic/gnwrgirnwaqnioau.jpeg" alt="">
+      <div class="event-content">
+        <h3>Priceless Gift</h3>
+        <p>December 22 - 24 2025 • Camp Out</p>
+        <button><a style="text-decoration: none; color: antiquewhite;" href="https://www.instagram.com/rccglp51hq?igsh=MWdjcTlrdzNxNDlnZA==">View Event</a></button>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="eventpic/WhatsApp Image 2025-12-30 at 2.07.19 PM.jpeg" alt="">
+      <div class="event-content">
+        <h3>Christmas Carols</h3>
+        <p>December 21, 2025 • 4:00 pm</p>
+        <button><a style="text-decoration: none; color: antiquewhite;" href="https://www.instagram.com/rccglp51hq?igsh=MWdjcTlrdzNxNDlnZA==">View Event</a></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="page-container">
+    <div class="slider">
+  <div class="slide" style="background-image:url('eventpic/WhatsApp\ Image\ 2025-12-30\ at\ 2.06.08\ PM.jpeg')"></div>
+  <div class="slide" style="background-image:url('eventpic/gnwrgirnwaqnioau.jpeg')"></div>
+  <div class="slide" style="background-image:url('eventpic/WhatsApp\ Image\ 2025-12-30\ at\ 2.07.19\ PM.jpeg')"></div>
+  <div class="slide" style="background-image:url('eventpic/next\ 1.jpeg')"></div>
+  <div class="slide" style="background-image:url('eventpic/next\ 2.jpeg')"></div>
+  <div class="slide" style="background-image:url('eventpic/next\ 3.jpeg')"></div>
+  <div class="slide" style="background-image:url('eventpic/next\ 5.jpeg')"></div>
+  <div class="slide" style="background-image:url('eventpic/34.jpeg')"></div>
+  <div class="slide" style="background-image:url('eventpic/45.jpeg')"></div>
+  <div class="slide" style="background-image:url('eventpic/50.jpeg')"></div>
+</div>
+
+  </div>
+  
+</section>
+
+<section>
+  <div class="page-containers">
+  <div class="live-banner">
+    <div class="ribbon">WATCH LIVE</div>
+    <button><a style="text-decoration: none; color: white;" href="https://www.instagram.com/rccglp51hq?igsh=MWdjcTlrdzNxNDlnZA==">WATCH OPEN DOORS ASSEMBLY EVENTS LIVE</a></button>
+  </div>
+</div>
+</section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-about">
+      <h3>Open Doors Assembly LP51 Provincial HQ</h3>
+      <p>
+        At Open Doors Assembly, we believe in a God who opens doors that no man can close. 
+          Our mission is to bring people closer to Christ, transform lives through the Word, and create a community where faith, 
+          hope, and love thrive.
+      </p>
+    </div>
+
+    <!-- Ministries -->
+    <div class="footer-links">
+      <h4>OUR MINISTRIES</h4>
+      <ul>
+        <li><a href="#">Kids Ministry</a></li>
+        <li><a href="event.html">Outreach Ministry</a></li>
+        <li><a href="prayer.html">Prayer Ministry</a></li>
+        <li><a href="#">Worship Ministry</a></li>
+      </ul>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-links">
+      <h4>USEFUL LINKS</h4>
+      <ul>
+        <li><a href="prayer.html">Prayer Request</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><a href="offering.html">Give</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>SOCIAL MEDIA</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Open Doors Assembly | Designed by MishaHub
+  </div>
+</footer>
+
+</body>
+</html>

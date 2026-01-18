@@ -14,8 +14,7 @@
     <section class="hero">
       <div class="nav-bar">
       <div class="logo"><img src="picture/Rccg_logo.png" alt="rccg">Open Doors Assembly</div>
-
-      <nav class="nav-link">
+        <nav class="nav-link">
         <ul>
           <li class="link"><a style="text-decoration: underline; color: gold;" href="home.html">Home</a></li>
           <li class="link"><a href="about.html" target="_blank">About</a></li>
@@ -27,7 +26,30 @@
           
         </ul>
       </nav>
+
+      <script>
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".nav-bar");
+  if (window.scrollY > 100) {
+    nav.classList.add("shrink");
+  } else {
+    nav.classList.remove("shrink");
+  }
+});
+</script>
+
+
     </div>
+
+    <div id="welcome-screen">
+  <div class="welcome-content">
+    <img src="picture/Rccg_logo.png" alt="Church Logo">
+    <h1>Welcome to Open Doors Assembly</h1>
+    <p>Where God opens doors no man can close</p>
+  </div>
+  </div>
+
+
         <div class="hero-content">
       
         <div class="slide active" style="background-image:url('picture/WhatsApp\ Image\ 2025-12-29\ at\ 11.09.38\ AM.jpeg')">
@@ -90,24 +112,53 @@ Step in, lift your voice, and join us in praising our God!
 </div>
 
 <script>
-    let slides = document.querySelectorAll(".slide");
+let slides = document.querySelectorAll(".slide");
 let index = 0;
+let slideInterval;
 
 function showSlide(i) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[i].classList.add("active");
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[i].classList.add("active");
 }
 
 function nextSlide() {
-    index = (index + 1) % slides.length;
-    showSlide(index);
+  index = (index + 1) % slides.length;
+  showSlide(index);
 }
 
 function prevSlide() {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
 }
-  </script>
+
+function startSlider() {
+  slideInterval = setInterval(nextSlide, 3500);
+}
+
+function stopSlider() {
+  clearInterval(slideInterval);
+}
+
+startSlider();
+
+
+document.querySelector(".hero").addEventListener("mouseenter", stopSlider);
+document.querySelector(".hero").addEventListener("mouseleave", startSlider);
+</script>
+
+<script>
+const hours = new Date().getHours();
+let greeting = "Welcome";
+
+if (hours < 12) greeting = "Good Morning";
+else if (hours < 18) greeting = "Good Afternoon";
+else greeting = "Good Evening";
+
+document.querySelector("#welcome-screen h1").innerText =
+  `${greeting}, Welcome to Open Doors Assembly`;
+</script>
+
+
     </section>
   </header>
 
@@ -306,7 +357,7 @@ function makeBig(selected) {
 
   <div class="events-grid">
 
-    <div class="event-card">
+    <div class="event-card stagger">
       <img src="eventpic/WhatsApp Image 2025-12-30 at 2.06.08 PM.jpeg" alt="">
       <div class="event-content">
         <h3>Turning Point</h3>
@@ -315,7 +366,7 @@ function makeBig(selected) {
       </div>
     </div>
 
-    <div class="event-card">
+    <div class="event-card reveal reveal-left">
       <img src="eventpic/gnwrgirnwaqnioau.jpeg" alt="">
       <div class="event-content">
         <h3>Priceless Gift</h3>
@@ -324,7 +375,7 @@ function makeBig(selected) {
       </div>
     </div>
 
-    <div class="event-card">
+    <div class="event-card reveal reveal-right">
       <img src="eventpic/WhatsApp Image 2025-12-30 at 2.07.19 PM.jpeg" alt="">
       <div class="event-content">
         <h3>Christmas Carols</h3>
@@ -334,7 +385,74 @@ function makeBig(selected) {
     </div>
 
   </div>
+
+  <script>
+const reveals = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show"); // replay animation
+      }
+    });
+  },
+  {
+    threshold: 0.2
+  }
+);
+
+reveals.forEach(el => revealObserver.observe(el));
+</script>
+
+<script>
+const staggerItems = document.querySelectorAll(".stagger");
+
+const staggerObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const index = [...staggerItems].indexOf(entry.target);
+        entry.target.style.transitionDelay = `${index * 0.2}s`;
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+        entry.target.style.transitionDelay = "0s";
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+staggerItems.forEach(item => staggerObserver.observe(item));
+</script>
+
 </section>
+
+<script>
+const reveals = document.querySelectorAll(
+  ".card, .event-card, .flyer, .image-box, .side-actions"
+);
+
+const revealObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+reveals.forEach(el => {
+  el.classList.add("reveal");
+  revealObserver.observe(el);
+});
+</script>
+
   </main>
 
   
@@ -378,12 +496,9 @@ function makeBig(selected) {
     <div class="footer-social">
       <h4>SOCIAL MEDIA</h4>
       <div class="social-icons">
-        <a href="#"><i class='bxr  bx-home'></i></a>
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class='bx bxl-instagram'></i></a>
-        <a href="#"><i class='bx bxl-youtube'></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/rccglp51hq?igsh=MWdjcTlrdzNxNDlnZA==" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://youtube.com/@rccglp51hq?si=1I02gXvVb8tNiFE5" target="_blank"><i class='bx bxl-youtube'></i></a>
+        
       </div>
     </div>
 

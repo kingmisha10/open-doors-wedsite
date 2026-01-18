@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
 }
 
 .hero {
@@ -217,6 +217,120 @@ body {
     }
     }
 
+    .events-wrapper {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* GRID */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.event-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.event-card h3 {
+  color: #2b2e83;
+  margin-bottom: 6px;
+}
+
+.tag {
+  display: inline-block;
+  background: #eef1ff;
+  color: #5b63d6;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.event-card ul {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.event-card ul li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.event-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.event-card button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ---------- STAGGER ANIMATION ---------- */
+.stagger {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.stagger.left {
+  transform: translateX(-60px);
+}
+
+.stagger.right {
+  transform: translateX(60px);
+}
+
+.stagger.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.calendar-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2b2e83;
+  transition: all 0.3s ease;
+}
+
+.calendar-btn:hover {
+  background: #2b2e83;
+  color: #fff;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
     .slider {
   display: flex;
   width: 90%;
@@ -281,6 +395,12 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
+
+.event-card:hover {
+  transform: translateY(-6px);
+  transition: 0.4s ease;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -462,4 +582,40 @@ body {
   .footer-container {
     grid-template-columns: 1fr;
   }
+}
+
+/* SCROLL REVEAL BASE */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+/* FROM LEFT */
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+/* FROM RIGHT */
+.reveal-right {
+  transform: translateX(60px);
+}
+
+/* WHEN VISIBLE */
+.reveal.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* STAGGER BASE */
+.stagger {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* ACTIVE STATE */
+.stagger.show {
+  opacity: 1;
+  transform: translateY(0);
 }

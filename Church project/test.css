@@ -1,11 +1,11 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
 }
 
-/* BLURRED BACKGROUND */
+
 .background {
   position: fixed;
   inset: 0;
@@ -23,7 +23,7 @@
   background: rgba(0,0,0,0.25);
 }
 
-/* HERO SECTION */
+
 .hero {
   min-height: 100vh;
   color: white;
@@ -57,7 +57,6 @@
   animation: fadeUp 1.2s ease;
 }
 
-/* SLIDER */
 .slider-container {
   width: 90%;
   max-width: 900px;
@@ -110,7 +109,7 @@
   background: linear-gradient(to top, rgba(0,0,0,.8), transparent);
 }
 
-/* TEXT ANIMATION */
+
 .content {
   position: absolute;
   bottom: 25px;
@@ -129,7 +128,7 @@
   font-size: 24px;
 }
 
-/* ANIMATIONS */
+
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -140,7 +139,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* MOBILE */
+
 @media (max-width: 768px) {
   .item:nth-child(2) { left: 140px; }
   .item:nth-child(3) { left: 280px; }
@@ -203,4 +202,4 @@
 
 .music-btn:hover {
   background: rgba(255,255,255,0.25);
-}
+} */

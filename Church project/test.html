@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,10 +8,10 @@
 </head>
 <body>
 
-<!-- BLURRED BACKGROUND -->
+
 <div class="background"></div>
 
-<!-- HERO SECTION -->
+
 <section class="hero">
   <h1 class="church-title">Open Doors Assembly</h1>
   <p class="church-sub">A place of worship, love & open heavens</p>
@@ -70,5 +70,253 @@
 <button class="music-btn" id="musicToggle">🔊 Worship Music</button>
 
 <script src="test.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peter | Interactive Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0f2027;
+  --card:rgba(255,255,255,0.12);
+  --text:#fff;
+  --accent:#00c6ff;
+}
+body.light{
+  --bg:#f5f7fa;
+  --card:#fff;
+  --text:#000;
+  --accent:#0072ff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* ===== VIDEO BACKGROUND ===== */
+.video-bg{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+}
+.video-bg video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.35);
+}
+
+/* ===== CURSOR ===== */
+.cursor{
+  width:20px;height:20px;
+  border:2px solid var(--accent);
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  transition:.1s;
+  z-index:999;
+}
+
+/* ===== HEADER ===== */
+header{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+header h1{
+  font-size:3rem;
+}
+header span{
+  color:var(--accent);
+}
+
+/* ===== TOGGLE ===== */
+.toggle{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:var(--card);
+  padding:10px 15px;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:80px 10%;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:var(--card);
+  backdrop-filter:blur(15px);
+  padding:25px;
+  border-radius:20px;
+  transform:translateY(60px);
+  opacity:0;
+  transition:.8s;
+}
+.card.show{
+  transform:none;
+  opacity:1;
+}
+.card:hover{
+  transform:scale(1.05) rotate(1deg);
+}
+
+/* ===== PROJECT IMAGE ===== */
+.project-img{
+  height:160px;
+  border-radius:15px;
+  overflow:hidden;
+  margin-bottom:15px;
+}
+.project-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.6s;
+}
+.card:hover img{
+  transform:scale(1.2);
+}
+
+/* ===== SKILLS ===== */
+.skill{
+  margin-bottom:15px;
+}
+.bar{
+  background:#333;
+  border-radius:10px;
+  overflow:hidden;
+}
+.fill{
+  height:10px;
+  width:0;
+  background:var(--accent);
+  transition:1.5s;
+}
+
+/* ===== PARALLAX ===== */
+.parallax{
+  background:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+  height:300px;
+  background-size:cover;
+  background-attachment:fixed;
+  border-radius:20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  header h1{font-size:2.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="video-bg">
+  <video autoplay muted loop>
+    <source src="https://cdn.coverr.co/videos/coverr-working-on-laptop-1573/1080p.mp4">
+  </video>
+</div>
+
+<div class="cursor"></div>
+
+<div class="toggle">🌙</div>
+
+<header>
+  <h1>Hi, I'm <span>Peter</span></h1>
+  <p>Creative Frontend Developer</p>
+</header>
+
+<section>
+<h2>Projects</h2>
+<div class="grid">
+  <div class="card animate">
+    <div class="project-img">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+    </div>
+    <h3>Church System</h3>
+    <p>Attendance & reports</p>
+  </div>
+
+  <div class="card animate">
+    <div class="project-img">
+      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97">
+    </div>
+    <h3>Landing Page</h3>
+    <p>Animations & UX</p>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>Skills</h2>
+<div class="skill">
+  <p>HTML</p>
+  <div class="bar"><div class="fill" data="95%"></div></div>
+</div>
+<div class="skill">
+  <p>CSS</p>
+  <div class="bar"><div class="fill" data="90%"></div></div>
+</div>
+<div class="skill">
+  <p>JavaScript</p>
+  <div class="bar"><div class="fill" data="85%"></div></div>
+</div>
+</section>
+
+<section>
+<div class="parallax"></div>
+</section>
+
+<script>
+/* CURSOR */
+const cursor=document.querySelector(".cursor");
+window.addEventListener("mousemove",e=>{
+  cursor.style.left=e.clientX+"px";
+  cursor.style.top=e.clientY+"px";
+});
+
+/* TOGGLE */
+document.querySelector(".toggle").onclick=()=>{
+  document.body.classList.toggle("light");
+};
+
+/* SCROLL ANIMATION */
+const cards=document.querySelectorAll(".animate");
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
+      e.target.querySelectorAll(".fill").forEach(f=>{
+        f.style.width=f.dataset;
+      });
+    }
+  });
+},{threshold:.2});
+cards.forEach(c=>obs.observe(c));
+</script>
+
 </body>
 </html>
